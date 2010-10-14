@@ -5,15 +5,15 @@ class Project
     end
 
     def startup_dir
-      @startup_dir = "product/nothinbutdotnetstore.web.ui"
+      @startup_dir = File.join(%w[product nothinbutdotnetstore.web.ui])
     end
 
     def specs_dir
-      @specs_dir = "artifacts/specs"
+      @specs_dir = File.join(%w[artifacts specs])
     end
 
     def report_folder
-      @report_folder = File.join(@specs_dir,'report')
+      @report_folder = File.join(%w[artifacts specs report]) 
     end
 
     def spec_assemblies
