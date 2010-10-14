@@ -14,7 +14,7 @@ local_settings = LocalSettings.new
 
 COMPILE_TARGET = 'debug'
 
-CLEAN.include(File.join(Project.startup_dir,"*.*"),'**/*.sql')
+CLEAN.include(File.join('artifacts',"*.*"),'**/*.sql')
 
 def create_sql_fileset(folder)
   FileList.new(File.join('product','sql',folder,'**/*.sql'))
