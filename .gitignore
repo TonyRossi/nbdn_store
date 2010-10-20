@@ -25,4 +25,5 @@ artifacts
 /product/*.web.ui/*.xml
 /product/*.web.ui/*.config
 /product/*.web.ui/*.txt
+*.orig
 
