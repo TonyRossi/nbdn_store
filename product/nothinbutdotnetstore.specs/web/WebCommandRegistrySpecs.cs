@@ -23,7 +23,7 @@ namespace nothinbutdotnetstore.specs.web
                 
             };
 
-            static IList<WebCommand> web_commands;
+            protected static IList<WebCommand> web_commands;
             protected static Request request;
         }
 
