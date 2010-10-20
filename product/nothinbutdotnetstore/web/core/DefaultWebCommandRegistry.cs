@@ -1,5 +1,5 @@
-using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace nothinbutdotnetstore.web.core
 {
@@ -14,12 +14,7 @@ namespace nothinbutdotnetstore.web.core
 
         public WebCommand get_the_command_that_can_process(Request request)
         {
-            foreach(var command in known_commands)
-            {
-                if (command.can_handle(request))
-                    return command;
-            }
-            throw new Exception("No commands found that match the given request");
+            return known_commands.First(x => x.can_handle(request));
         }
     }
 }
