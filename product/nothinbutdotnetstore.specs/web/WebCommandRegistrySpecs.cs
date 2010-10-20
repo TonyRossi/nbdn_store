@@ -28,7 +28,7 @@ namespace nothinbutdotnetstore.specs.web
                 Enumerable.Range(1,100).each(x => web_commands.Add(an<WebCommand>()));
                 web_commands.Add(the_command_that_can_process_the_request);
                 provide_a_basic_sut_constructor_argument<IEnumerable<WebCommand>>(web_commands);
-
+                               
 
                 the_command_that_can_process_the_request.Stub(x => x.can_handle(request)).Return(true);
             };
