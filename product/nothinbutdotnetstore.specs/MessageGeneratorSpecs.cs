@@ -1,4 +1,3 @@
-using System.Configuration;
 using Machine.Specifications;
 using Machine.Specifications.DevelopWithPassion.Rhino;
 
@@ -20,8 +19,6 @@ namespace nothinbutdotnetstore.specs
 
             It should_send_back_the_message_it_was_told = () =>
                 result.ShouldEqual("blah");
-
-  
         }
     }
 }
