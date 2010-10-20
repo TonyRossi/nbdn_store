@@ -65,6 +65,7 @@
     <Compile Include="web\FrontControllerSpecs.cs" />
     <Compile Include="web\RequestHandlerSpecs.cs" />
     <Compile Include="web\WebCommandRegistrySpecs.cs" />
+    <Compile Include="web\WebCommandSpecs.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\nothinbutdotnetstore\nothinbutdotnetstore.csproj">

@@ -46,10 +46,12 @@
   <ItemGroup>
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="web\core\DefaultFrontController.cs" />
+    <Compile Include="web\core\DefaultWebCommand.cs" />
     <Compile Include="web\core\DefaultWebCommandRegistry.cs" />
     <Compile Include="web\core\FrontController.cs" />
     <Compile Include="web\core\MissingWebCommand.cs" />
     <Compile Include="web\core\Request.cs" />
+    <Compile Include="web\core\RequestCriteria.cs" />
     <Compile Include="web\core\RequestFactory.cs" />
     <Compile Include="web\core\RequestHandler.cs" />
     <Compile Include="web\core\WebCommand.cs" />
