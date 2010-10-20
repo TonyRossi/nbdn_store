@@ -4,14 +4,21 @@ namespace nothinbutdotnetstore.web.core
 {
     public class DefaultWebCommand : WebCommand
     {
-        public void process(Request request)
+    	private RequestCriteria criteria;
+
+		public DefaultWebCommand(RequestCriteria criteria)
+		{
+			this.criteria = criteria;
+		}
+
+    	public void process(Request request)
         {
             throw new NotImplementedException();
         }
 
         public bool can_handle(Request request)
         {
-            throw new NotImplementedException();
+        	return criteria(request);
         }
     }
 }
