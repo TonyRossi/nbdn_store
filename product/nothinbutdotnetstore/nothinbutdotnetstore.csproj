@@ -49,14 +49,20 @@
     <Compile Include="domain\Product.cs" />
     <Compile Include="domain\stubs\StubStoreDirectory.cs" />
     <Compile Include="MessageGenerator.cs" />
+    <Compile Include="web\application\StoreDirectoryController.cs" />
     <Compile Include="web\application\ViewDepartmentsInDepartment.cs" />
     <Compile Include="web\application\ViewMainDeparmentsInTheStore.cs" />
     <Compile Include="web\application\ViewProductsInADepartment.cs" />
     <Compile Include="web\core\ApplicationCommand .cs" />
+    <Compile Include="web\core\BasicViewForA.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="web\core\CurrentContextResolver.cs" />
     <Compile Include="web\core\DefaultFrontController.cs" />
     <Compile Include="web\core\DefaultWebCommand.cs" />
     <Compile Include="web\core\DefaultWebCommandRegistry.cs" />
     <Compile Include="web\core\FrontController.cs" />
+    <Compile Include="web\core\HttpHandlerViewFactory.cs" />
     <Compile Include="web\core\MissingWebCommand.cs" />
     <Compile Include="web\core\Request.cs" />
     <Compile Include="web\core\RequestCriteria.cs" />
@@ -64,10 +70,14 @@
     <Compile Include="web\core\RequestHandler.cs" />
     <Compile Include="web\core\ResponseEngine .cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
-    <Compile Include="web\core\stubs\StubResponseEngine.cs" />
     <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
+    <Compile Include="web\core\stubs\StubViewRegistry.cs" />
+    <Compile Include="web\core\ViewFactory.cs" />
+    <Compile Include="web\core\ViewForA.cs" />
+    <Compile Include="web\core\ViewRegistry.cs" />
     <Compile Include="web\core\WebCommand.cs" />
     <Compile Include="web\core\WebCommandRegistry.cs" />
+    <Compile Include="web\core\WebFormResponseEngine.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

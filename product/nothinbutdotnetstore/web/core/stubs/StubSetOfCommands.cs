@@ -16,7 +16,7 @@ namespace nothinbutdotnetstore.web.core.stubs
         public IEnumerator<WebCommand> GetEnumerator()
         {
 
-            yield return new DefaultWebCommand(x=> x.Url.EndsWith("Departments.Store"),
+            yield return new DefaultWebCommand(x=> true,
                                                new ViewMainDeparmentsInTheStore());
 
             yield return new DefaultWebCommand(x => x.Url.Contains("Departments.Store") && x.QueryString.Any(),
