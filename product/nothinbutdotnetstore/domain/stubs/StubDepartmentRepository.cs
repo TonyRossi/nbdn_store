@@ -11,9 +11,9 @@ namespace nothinbutdotnetstore.domain.stubs
             return Enumerable.Range(1, 100).Select(x => new Department {name = x.ToString("Department 0")});
         }
 
-        public IEnumerable<Department> get_the_departments_in_the_department(Department department)
+        public IEnumerable<Department> get_the_departments_in(Department department)
         {
-            return department.departments;
+            return Enumerable.Range(1, 100).Select(x => new Department {name = x.ToString("A Department In A Department 0")});
         }
     }
 }

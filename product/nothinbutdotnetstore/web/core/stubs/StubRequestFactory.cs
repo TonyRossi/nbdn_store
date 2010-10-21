@@ -13,10 +13,10 @@ namespace nothinbutdotnetstore.web.core.stubs
 
         class StubRequest : Request
         {
-            public Department DepartmentToProcess
+
+            public InputModel map<InputModel>()
             {
-                get { return new Department(); }
-                set { throw new NotImplementedException(); }
+                throw new NotImplementedException();
             }
         }
     }
