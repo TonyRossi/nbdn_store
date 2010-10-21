@@ -6,17 +6,35 @@ namespace nothinbutdotnetstore.web.core.stubs
 {
     public class StubRequestFactory : RequestFactory
     {
+
         public Request create_request_from(HttpContext http_context)
         {
-            return new StubRequest();
+            return new StubRequest(http_context.Request);
         }
 
         class StubRequest : Request
         {
-
-            public InputModel map<InputModel>()
+            public StubRequest(HttpRequest request)
             {
-                throw new NotImplementedException();
+                Url = request.Url.ToString();
+                QueryString = request.Url.Query.Trim('?').Split('&');
+
+            }
+
+            public string[] QueryString
+            {
+                get;
+                private set;
+            }
+
+            public InputModel map<InputModel>() where InputModel :new()
+            {
+                return new InputModel();
+            }
+
+            public string Url
+            {
+                get; private set;
             }
         }
     }

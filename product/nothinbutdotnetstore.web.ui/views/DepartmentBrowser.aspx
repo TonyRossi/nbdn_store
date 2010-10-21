@@ -16,7 +16,7 @@ Inherits="System.Web.UI.Page" MasterPageFile="Store.master" %>
 		<!-- for each of the main departments in the store -->
         	<tr class="ListItem">
                		 <td>                     
-                     <%= department.name %>
+                     <a href="Departments.store?department=<%= department.name %>"> <%= department.name %></a>
                 	</td>
            	 </tr>        
            	 <%

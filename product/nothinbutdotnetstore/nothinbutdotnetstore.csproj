@@ -50,7 +50,9 @@
     <Compile Include="domain\ProductRepository.cs" />
     <Compile Include="domain\stubs\StubDepartmentRepository.cs" />
     <Compile Include="MessageGenerator.cs" />
+    <Compile Include="web\application\ViewDepartmentsInDepartment.cs" />
     <Compile Include="web\application\ViewMainDeparmentsInTheStore.cs" />
+    <Compile Include="web\application\ViewProductsInADepartment.cs" />
     <Compile Include="web\core\ApplicationCommand .cs" />
     <Compile Include="web\core\DefaultFrontController.cs" />
     <Compile Include="web\core\DefaultWebCommand.cs" />

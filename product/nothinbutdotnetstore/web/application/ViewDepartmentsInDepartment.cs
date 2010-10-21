@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using nothinbutdotnetstore.domain;
+﻿using nothinbutdotnetstore.domain;
 using nothinbutdotnetstore.domain.stubs;
 using nothinbutdotnetstore.web.core;
 using nothinbutdotnetstore.web.core.stubs;
 
-namespace nothinbutdotnetstore.specs.web
+namespace nothinbutdotnetstore.web.application
 {
     public class ViewDepartmentsInDepartment : ApplicationCommand
     {

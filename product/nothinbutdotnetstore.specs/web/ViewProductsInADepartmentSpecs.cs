@@ -2,6 +2,7 @@
  using Machine.Specifications;
  using Machine.Specifications.DevelopWithPassion.Rhino;
  using nothinbutdotnetstore.domain;
+ using nothinbutdotnetstore.web.application;
  using nothinbutdotnetstore.web.core;
  using Rhino.Mocks;
 

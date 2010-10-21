@@ -1,7 +1,7 @@
 using nothinbutdotnetstore.domain;
 using nothinbutdotnetstore.web.core;
 
-namespace nothinbutdotnetstore.specs.web
+namespace nothinbutdotnetstore.web.application
 {
     public class ViewProductsInADepartment : ApplicationCommand
     {

@@ -65,10 +65,8 @@
     <Compile Include="utility\ObjectMother.cs" />
     <Compile Include="web\FrontControllerSpecs.cs" />
     <Compile Include="web\RequestHandlerSpecs.cs" />
-    <Compile Include="web\ViewDepartmentsInDepartment.cs" />
     <Compile Include="web\ViewDepartmentsInDepartmentsSpecs.cs" />
     <Compile Include="web\ViewMainDeparmentsInTheStoreSpecs.cs" />
-    <Compile Include="web\ViewProductsInADepartment.cs" />
     <Compile Include="web\ViewProductsInADepartmentSpecs.cs" />
     <Compile Include="web\WebCommandRegistrySpecs.cs" />
     <Compile Include="web\WebCommandSpecs.cs" />
