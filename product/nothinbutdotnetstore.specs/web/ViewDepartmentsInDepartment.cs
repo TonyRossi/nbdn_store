@@ -28,7 +28,7 @@ namespace nothinbutdotnetstore.specs.web
 
         public void process(Request request)
         {
-            response_engine.display(department_repository.get_all_the_main_departments());
+            response_engine.display(department_repository.get_the_departments_in_the_department(request.DepartmentToProcess));
         }
     }
 }

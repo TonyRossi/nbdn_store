@@ -25,16 +25,17 @@ namespace nothinbutdotnetstore.specs.web
              {
                  request =an<Request>();
                  response_engine = the_dependency<ResponseEngine>();
-                 departments_in = new List<Department>()
+                 departments_in_department = new List<Department>()
                                       {
                                           new Department() {name = "Fun Department 1"},
                                           new Department() {name = "Fun Department 2"}
                                       };
-                 departments = new List<Department> {new Department(){name="Department", departments = departments_in}};
+                 department = new Department(){name="Department", departments = departments_in_department};
+                 request.DepartmentToProcess = department;
 
                  department_repository = the_dependency<DepartmentRepository>();
 
-                 department_repository.Stub(x => x.get_all_the_main_departments()).Return(departments);
+                 department_repository.Stub(x => x.get_the_departments_in_the_department(department)).Return(departments_in_department);
              };
 
              Because b = () =>
@@ -42,13 +43,13 @@ namespace nothinbutdotnetstore.specs.web
 
 
              It should_tell_the_response_engine_to_display_the_departments = () =>
-                 response_engine.received(x => x.display(departments));
+                 response_engine.received(x => x.display(departments_in_department));
   
              static DepartmentRepository department_repository;
              static Request request;
              static ResponseEngine response_engine;
-             static IEnumerable<Department> departments;
-             static IEnumerable<Department> departments_in;
+             static Department department;
+             static IEnumerable<Department> departments_in_department;
          }
      }
 }

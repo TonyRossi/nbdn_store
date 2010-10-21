@@ -1,4 +1,6 @@
+using System;
 using System.Web;
+using nothinbutdotnetstore.domain;
 
 namespace nothinbutdotnetstore.web.core.stubs
 {
@@ -11,6 +13,11 @@ namespace nothinbutdotnetstore.web.core.stubs
 
         class StubRequest : Request
         {
+            public Department DepartmentToProcess
+            {
+                get { return new Department(); }
+                set { throw new NotImplementedException(); }
+            }
         }
     }
 }
