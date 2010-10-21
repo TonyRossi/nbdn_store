@@ -65,7 +65,7 @@
     <Compile Include="utility\ObjectMother.cs" />
     <Compile Include="web\FrontControllerSpecs.cs" />
     <Compile Include="web\RequestHandlerSpecs.cs" />
-    <Compile Include="web\RequestImplementer.cs" />
+    <Compile Include="web\DefaultRequest.cs" />
     <Compile Include="web\RequestSpecs.cs" />
     <Compile Include="web\ResponseEngineSpecs.cs" />
     <Compile Include="web\ViewDepartmentsInDepartmentsSpecs.cs" />

@@ -1,35 +1,39 @@
-﻿using System.Web;
-using Machine.Specifications;
+﻿using Machine.Specifications;
 using Machine.Specifications.DevelopWithPassion.Rhino;
-using nothinbutdotnetstore.specs.utility;
 using nothinbutdotnetstore.web.core;
-using Rhino.Mocks;
 
 namespace nothinbutdotnetstore.specs.web
 {
     public class RequestSpecs
     {
-         public abstract class concern : Observes<Request,
-                                             RequestImplementer>
-         {
-        
-         }
+        public abstract class concern : Observes<Request,
+                                            DefaultRequest>
+        {
+        }
 
-         [Subject(typeof(Request))]
-         public class when_asked_for_a_map : concern
-         {
-             Because b = () =>
-                 input_model = sut.map<InputModel>();
+        [Subject(typeof(Request))]
+        public class when_mapping_an_input_model : concern
+        {
+            Establish c = () =>
+            {
+                the_mapped_model = new InputModel();
+                payload = the_dependency<Payload>();
+            };
 
-             private It should_return_a_map_for_the_specified_input_model = () =>
-                 input_model.ShouldBeOfType(typeof (InputModel));
+            Because b = () =>
+                result = sut.map<InputModel>();
 
-             private static InputModel input_model;
-         }
+            It should_return_the_model_mapped_from_its_payload = () =>
+                result.ShouldEqual(the_mapped_model);
+
+
+            static InputModel result;
+            static InputModel the_mapped_model;
+            static Payload payload;
+        }
 
         public class InputModel
         {
-            
         }
-     }
+    }
 }
