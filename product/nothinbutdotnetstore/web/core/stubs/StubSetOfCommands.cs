@@ -19,15 +19,6 @@ namespace nothinbutdotnetstore.web.core.stubs
             yield return new DefaultWebCommand(x=> true,
                                                new ViewMainDeparmentsInTheStore());
 
-            yield return new DefaultWebCommand(x => x.Url.Contains("Departments.Store") && x.QueryString.Any(),
-                                               new ViewDepartmentsInDepartment());
-
-
-            yield return new DefaultWebCommand(x => x.Url.Contains("?"),
-                                               new ViewDepartmentsInDepartment());
-
-             //yield return new DefaultWebCommand(x => x.Url.Contains("Departartments/AllDepartments.Store"),
-             //                                  new ViewProductsInADepartment());
         
         }
     }

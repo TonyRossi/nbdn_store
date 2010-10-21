@@ -27,9 +27,9 @@ namespace nothinbutdotnetstore.web.core.stubs
                 private set;
             }
 
-            public InputModel map<InputModel>() where InputModel :new()
+            public InputModel map<InputModel>() 
             {
-                return new InputModel();
+                throw new NotImplementedException();
             }
 
             public string Url
