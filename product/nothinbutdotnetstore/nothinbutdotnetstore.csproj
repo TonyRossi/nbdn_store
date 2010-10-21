@@ -44,7 +44,12 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="domain\Department.cs" />
+    <Compile Include="domain\DepartmentRepository.cs" />
+    <Compile Include="domain\stubs\StubDepartmentRepository.cs" />
     <Compile Include="MessageGenerator.cs" />
+    <Compile Include="web\application\ViewMainDeparmentsInTheStore.cs" />
+    <Compile Include="web\core\ApplicationCommand .cs" />
     <Compile Include="web\core\DefaultFrontController.cs" />
     <Compile Include="web\core\DefaultWebCommand.cs" />
     <Compile Include="web\core\DefaultWebCommandRegistry.cs" />
@@ -54,6 +59,10 @@
     <Compile Include="web\core\RequestCriteria.cs" />
     <Compile Include="web\core\RequestFactory.cs" />
     <Compile Include="web\core\RequestHandler.cs" />
+    <Compile Include="web\core\ResponseEngine .cs" />
+    <Compile Include="web\core\stubs\StubRequestFactory.cs" />
+    <Compile Include="web\core\stubs\StubResponseEngine.cs" />
+    <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
     <Compile Include="web\core\WebCommand.cs" />
     <Compile Include="web\core\WebCommandRegistry.cs" />
   </ItemGroup>

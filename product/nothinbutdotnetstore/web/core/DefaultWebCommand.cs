@@ -1,24 +1,24 @@
-using System;
-
 namespace nothinbutdotnetstore.web.core
 {
     public class DefaultWebCommand : WebCommand
     {
-    	private RequestCriteria criteria;
+        RequestCriteria criteria;
+        ApplicationCommand command;
 
-		public DefaultWebCommand(RequestCriteria criteria)
-		{
-			this.criteria = criteria;
-		}
-
-    	public void process(Request request)
+        public DefaultWebCommand(RequestCriteria criteria, ApplicationCommand command)
         {
-            throw new NotImplementedException();
+            this.criteria = criteria;
+            this.command = command;
+        }
+
+        public void process(Request request)
+        {
+            command.process(request);
         }
 
         public bool can_handle(Request request)
         {
-        	return criteria(request);
+            return criteria(request);
         }
     }
 }

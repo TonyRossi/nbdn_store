@@ -32,5 +32,30 @@ namespace nothinbutdotnetstore.specs.web
              static bool result;
              static Request request;
          }
+
+         [Subject(typeof(DefaultWebCommand))]
+         public class when_processing_a_request : concern
+         {
+
+             Establish c = () =>
+             {
+                 request = an<Request>();
+                 application_command = the_dependency<ApplicationCommand>();
+                 provide_a_basic_sut_constructor_argument<RequestCriteria>(x => true);
+
+             };
+
+             Because b = () =>
+                 sut.process(request);
+
+
+             It should_trigger_the_application_specific_command_that_does_the_real_work = () =>
+                 application_command.received(x => x.process(request));
+
+
+             static bool result;
+             static Request request;
+             static ApplicationCommand application_command;
+         }
      }
  }
