@@ -65,6 +65,7 @@
     <Compile Include="web\core\HttpHandlerViewFactory.cs" />
     <Compile Include="web\core\MissingWebCommand.cs" />
     <Compile Include="web\core\Payload.cs" />
+    <Compile Include="web\core\PayloadMapper.cs" />
     <Compile Include="web\core\Request.cs" />
     <Compile Include="web\core\RequestCriteria.cs" />
     <Compile Include="web\core\RequestFactory.cs" />
