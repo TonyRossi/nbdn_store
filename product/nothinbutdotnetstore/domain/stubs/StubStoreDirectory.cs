@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace nothinbutdotnetstore.domain.stubs
 {
-    public class StubDepartmentRepository : DepartmentRepository, ProductRepository
+    public class StubStoreDirectory : StoreDirectory
     {
         public IEnumerable<Department> get_all_the_main_departments()
         {

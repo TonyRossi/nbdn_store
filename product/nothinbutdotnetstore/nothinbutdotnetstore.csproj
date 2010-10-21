@@ -45,10 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="domain\Department.cs" />
-    <Compile Include="domain\DepartmentRepository.cs" />
+    <Compile Include="domain\StoreDirectory.cs" />
     <Compile Include="domain\Product.cs" />
-    <Compile Include="domain\ProductRepository.cs" />
-    <Compile Include="domain\stubs\StubDepartmentRepository.cs" />
+    <Compile Include="domain\stubs\StubStoreDirectory.cs" />
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="web\application\ViewDepartmentsInDepartment.cs" />
     <Compile Include="web\application\ViewMainDeparmentsInTheStore.cs" />

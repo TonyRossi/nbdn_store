@@ -23,12 +23,12 @@ namespace nothinbutdotnetstore.specs.web
              {
                  request = an<Request>();
                  response_engine = the_dependency<ResponseEngine>();
-                 product_repository = the_dependency<ProductRepository>();
+                 store_directory = the_dependency<StoreDirectory>();
                  the_products_in_a_department = new List<Product>();
                  department_with_products = new Department();
 
                  request.Stub(x => x.map<Department>()).Return(department_with_products);
-                 product_repository.Stub(x => x.get_the_products_in(department_with_products)).Return(the_products_in_a_department);
+                 store_directory.Stub(x => x.get_the_products_in(department_with_products)).Return(the_products_in_a_department);
              };
              Because b = () =>
                  sut.process(request);
@@ -40,7 +40,7 @@ namespace nothinbutdotnetstore.specs.web
              static ResponseEngine response_engine;
              static IEnumerable<Product> the_products_in_a_department;
              static Request request;
-             static ProductRepository product_repository;
+             static StoreDirectory store_directory;
              static Department department_with_products;
          }
      }

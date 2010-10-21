@@ -7,24 +7,24 @@ namespace nothinbutdotnetstore.web.application
 {
     public class ViewDepartmentsInDepartment : ApplicationCommand
     {
-        DepartmentRepository department_repository;
+        StoreDirectory store_directory;
         ResponseEngine response_engine;
 
         public ViewDepartmentsInDepartment()
-            : this(new StubDepartmentRepository(),
+            : this(new StubStoreDirectory(),
                 new StubResponseEngine())
         {
         }
 
-        public ViewDepartmentsInDepartment(DepartmentRepository department_repository, ResponseEngine response_engine)
+        public ViewDepartmentsInDepartment(StoreDirectory store_directory, ResponseEngine response_engine)
         {
-            this.department_repository = department_repository;
+            this.store_directory = store_directory;
             this.response_engine = response_engine;
         }
 
         public void process(Request request)
         {
-            response_engine.display(department_repository.get_the_departments_in(request.map<Department>()));
+            response_engine.display(store_directory.get_the_departments_in(request.map<Department>()));
         }
     }
 }

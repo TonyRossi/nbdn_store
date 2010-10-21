@@ -26,9 +26,9 @@ namespace nothinbutdotnetstore.specs.web
                  response_engine = the_dependency<ResponseEngine>();
                  main_departments = new List<Department> {new Department()};
 
-                 department_repository = the_dependency<DepartmentRepository>();
+                 store_directory = the_dependency<StoreDirectory>();
 
-                 department_repository.Stub(x => x.get_all_the_main_departments()).Return(main_departments);
+                 store_directory.Stub(x => x.get_all_the_main_departments()).Return(main_departments);
              };
 
              Because b = () =>
@@ -40,7 +40,7 @@ namespace nothinbutdotnetstore.specs.web
              It should_tell_the_response_engine_to_display_the_departments = () =>
                  response_engine.received(x => x.display(main_departments));
   
-             static DepartmentRepository department_repository;
+             static StoreDirectory store_directory;
              static Request request;
              static ResponseEngine response_engine;
              static IEnumerable<Department> main_departments;

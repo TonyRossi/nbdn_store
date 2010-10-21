@@ -31,9 +31,9 @@ namespace nothinbutdotnetstore.specs.web
 
                 request.Stub(x => x.map<Department>()).Return(parent_department);
 
-                department_repository = the_dependency<DepartmentRepository>();
+                store_directory = the_dependency<StoreDirectory>();
 
-                department_repository.Stub(x => x.get_the_departments_in(parent_department)).Return(departments_in_department);
+                store_directory.Stub(x => x.get_the_departments_in(parent_department)).Return(departments_in_department);
             };
 
             Because b = () =>
@@ -42,7 +42,7 @@ namespace nothinbutdotnetstore.specs.web
             It should_tell_the_response_engine_to_display_the_departments = () =>
                 response_engine.received(x => x.display(departments_in_department));
 
-            static DepartmentRepository department_repository;
+            static StoreDirectory store_directory;
             static Request request;
             static ResponseEngine response_engine;
             static Department parent_department;
