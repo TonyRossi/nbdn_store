@@ -87,6 +87,7 @@ namespace nothinbutdotnetstore.specs.tasks
             Establish c = () =>
             {
                 the_second_command = an<StartupCommand>();
+                startup_command_factory.Stub(x => x.create_from(typeof(OurSecondCommand))).Return(the_second_command);
                 Enumerable.Range(1,100).each(x => all_commands.Add(an<StartupCommand>()));
             };
 
