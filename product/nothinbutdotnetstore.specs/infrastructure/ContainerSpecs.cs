@@ -1,5 +1,3 @@
- 
-using System.Threading;
 using Machine.Specifications;
 using Machine.Specifications.DevelopWithPassion.Rhino;
 using nothinbutdotnetstore.infrastructure.containers;
@@ -10,7 +8,6 @@ namespace nothinbutdotnetstore.specs.infrastructure
     {
         public abstract class concern : Observes
         {
-
         }
 
         [Subject(typeof(Container))]
