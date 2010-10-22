@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using nothinbutdotnetstore.infrastructure;
 
 namespace nothinbutdotnetstore.tasks.startup
 {
@@ -30,11 +31,7 @@ namespace nothinbutdotnetstore.tasks.startup
         public void finish_by<TheCommand>() where TheCommand :StartupCommand
         {
             append_command(typeof(TheCommand));
-
-            foreach (StartupCommand command in all_commands)
-            {
-                command.run();
-            }
+            all_commands.each(x => x.run());
         }
     }
 }

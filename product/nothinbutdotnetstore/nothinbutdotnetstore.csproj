@@ -67,6 +67,7 @@
     <Compile Include="infrastructure\containers\DependencyContainer.cs" />
     <Compile Include="infrastructure\containers\Container.cs" />
     <Compile Include="infrastructure\containers\ContainerResolver.cs" />
+    <Compile Include="infrastructure\EnumerableExtensions.cs" />
     <Compile Include="infrastructure\ExpressionUtility.cs" />
     <Compile Include="infrastructure\logging\basic\TextWriterLogger.cs" />
     <Compile Include="infrastructure\logging\basic\TextWriterLoggerFactory.cs" />

@@ -70,6 +70,7 @@
     <Compile Include="infrastructure\BasicDependencyFactorySpecs.cs" />
     <Compile Include="infrastructure\ContainerSpecs.cs" />
     <Compile Include="infrastructure\DependencyFactoriesSpecs.cs" />
+    <Compile Include="infrastructure\EnumerableExtensionsSpecs.cs" />
     <Compile Include="infrastructure\ExpressionUtilitySpecs.cs" />
     <Compile Include="infrastructure\Log4NetInitializationCommandSpec.cs" />
     <Compile Include="infrastructure\Log4NetLoggerFactorySpecs.cs" />
