@@ -63,6 +63,8 @@
     <Compile Include="infrastructure\containers\basic\DependencyCreationException.cs" />
     <Compile Include="infrastructure\containers\basic\DependencyFactories.cs" />
     <Compile Include="infrastructure\containers\basic\DependencyFactory.cs" />
+    <Compile Include="infrastructure\containers\basic\GreedyConstructorSelectionStrategy.cs" />
+    <Compile Include="infrastructure\containers\basic\GreedyConstructorSelectionStrategySpecs.cs" />
     <Compile Include="infrastructure\containers\basic\MissingDependencyFactory.cs" />
     <Compile Include="infrastructure\containers\DependencyContainer.cs" />
     <Compile Include="infrastructure\containers\Container.cs" />
