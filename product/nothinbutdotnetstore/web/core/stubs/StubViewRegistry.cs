@@ -1,5 +1,3 @@
-using System;
-
 namespace nothinbutdotnetstore.web.core.stubs
 {
     public class StubViewRegistry : ViewRegistry

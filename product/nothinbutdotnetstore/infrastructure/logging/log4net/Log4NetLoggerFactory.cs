@@ -5,10 +5,10 @@ namespace nothinbutdotnetstore.infrastructure.logging.log4net
 {
     public class Log4NetLoggerFactory : LoggerFactory
     {
-        Command initialization_command;
+        Log4NetInitializationCommand initialization_command;
         bool initialized;
 
-        public Log4NetLoggerFactory(Command initialization_command)
+        public Log4NetLoggerFactory(Log4NetInitializationCommand initialization_command)
         {
             this.initialization_command = initialization_command;
         }

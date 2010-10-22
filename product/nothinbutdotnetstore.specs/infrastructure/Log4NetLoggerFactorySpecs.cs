@@ -19,7 +19,7 @@ namespace nothinbutdotnetstore.specs.infrastructure
          {
              Establish c = () =>
              {
-                 initialization_command = the_dependency<Command>();
+                 initialization_command = the_dependency<Log4NetInitializationCommand>();
              };
 
              Because b = () =>
@@ -33,7 +33,7 @@ namespace nothinbutdotnetstore.specs.infrastructure
                  result.ShouldBeAn<Log4NetLog>().underlying_logger.ShouldNotBeNull();
   
 
-             static Command initialization_command;
+             static Log4NetInitializationCommand initialization_command;
              static Logger result;
          }
 
@@ -42,7 +42,7 @@ namespace nothinbutdotnetstore.specs.infrastructure
          {
              Establish c = () =>
              {
-                 initialization_command = the_dependency<Command>();
+                 initialization_command = the_dependency<Log4NetInitializationCommand>();
              };
 
              Because b = () =>
@@ -59,7 +59,7 @@ namespace nothinbutdotnetstore.specs.infrastructure
                  result.ShouldBeAn<Log4NetLog>().underlying_logger.ShouldNotBeNull();
   
 
-             static Command initialization_command;
+             static Log4NetInitializationCommand initialization_command;
              static Logger result;
          }
      }

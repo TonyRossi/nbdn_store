@@ -16,11 +16,11 @@ namespace nothinbutdotnetstore.specs.tasks
 
         }
 
-        [Subject(typeof(Startup))]
+        [Subject(typeof(StartUp))]
         public class when_it_has_finished_running : concern
         {
             Because b = () =>
-                Startup.start_the_application();
+                StartUp.run();
 
             It should_be_able_to_run_the_application_correctly = () =>
             {

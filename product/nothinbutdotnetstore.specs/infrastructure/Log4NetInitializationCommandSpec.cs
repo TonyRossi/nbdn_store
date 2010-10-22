@@ -11,13 +11,13 @@ namespace nothinbutdotnetstore.specs.infrastructure
  {   
      public class Log4NetInitializationCommandSpec
      {
-         public abstract class concern : Observes<Log4NetInitializationCommand,
-                                             Log4NetInitializationCommand>
+         public abstract class concern : Observes<DefaultLog4NetInitializationCommand,
+                                             DefaultLog4NetInitializationCommand>
          {
         
          }
 
-         [Subject(typeof(Log4NetInitializationCommand))]
+         [Subject(typeof(DefaultLog4NetInitializationCommand))]
          public class when_initialization_has_been_completed : concern
          {
 

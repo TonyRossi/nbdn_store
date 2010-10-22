@@ -71,7 +71,7 @@
     <Compile Include="infrastructure\logging\basic\TextWriterLogger.cs" />
     <Compile Include="infrastructure\logging\basic\TextWriterLoggerFactory.cs" />
     <Compile Include="infrastructure\logging\Log.cs" />
-    <Compile Include="infrastructure\logging\log4net\Log4NetInitializationCommand.cs" />
+    <Compile Include="infrastructure\logging\log4net\DefaultLog4NetInitializationCommand.cs" />
     <Compile Include="infrastructure\logging\log4net\Log4NetLog.cs" />
     <Compile Include="infrastructure\logging\log4net\Log4NetLoggerFactory.cs" />
     <Compile Include="infrastructure\logging\Logger.cs" />
@@ -79,10 +79,12 @@
     <Compile Include="infrastructure\Mapper.cs" />
     <Compile Include="infrastructure\MapperRegistry.cs" />
     <Compile Include="MessageGenerator.cs" />
+    <Compile Include="tasks\startup\ConfigureApplicationRoutes.cs" />
     <Compile Include="tasks\startup\ConfigureFrontController.cs" />
     <Compile Include="tasks\startup\ConfigureInfrastructure.cs" />
     <Compile Include="tasks\startup\Startup.cs" />
     <Compile Include="tasks\startup\StartupCommand.cs" />
+    <Compile Include="tasks\startup\StartupFacilities.cs" />
     <Compile Include="web\application\mappers\DepartmentMapper.cs" />
     <Compile Include="web\application\mappers\DetailsMapper.cs" />
     <Compile Include="web\application\mappers\InputKey.cs" />
@@ -111,8 +113,8 @@
     <Compile Include="web\core\RequestFactory.cs" />
     <Compile Include="web\core\RequestHandler.cs" />
     <Compile Include="web\core\ResponseEngine .cs" />
-    <Compile Include="web\core\stubs\StubRequestFactory.cs" />
-    <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
+    <Compile Include="web\core\Routes.cs" />
+    <Compile Include="web\core\RouteTable.cs" />
     <Compile Include="web\core\stubs\StubViewRegistry.cs" />
     <Compile Include="web\core\Url.cs" />
     <Compile Include="web\core\ViewFactory.cs" />

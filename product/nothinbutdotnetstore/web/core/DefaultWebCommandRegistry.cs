@@ -7,9 +7,9 @@ namespace nothinbutdotnetstore.web.core
     {
         IEnumerable<WebCommand> known_commands;
 
-        public DefaultWebCommandRegistry(IEnumerable<WebCommand> knownCommands)
+        public DefaultWebCommandRegistry(IEnumerable<WebCommand> known_commands)
         {
-            known_commands = knownCommands;
+            this.known_commands = known_commands;
         }
 
         public WebCommand get_the_command_that_can_process(Request request)
