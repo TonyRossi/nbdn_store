@@ -53,6 +53,7 @@
     <Compile Include="infrastructure\containers\Container.cs" />
     <Compile Include="infrastructure\containers\ContainerResolver.cs" />
     <Compile Include="infrastructure\ExpressionUtility.cs" />
+    <Compile Include="infrastructure\logging\basic\TextWriterLogger.cs" />
     <Compile Include="infrastructure\logging\Log.cs" />
     <Compile Include="infrastructure\logging\Logger.cs" />
     <Compile Include="infrastructure\logging\LoggerFactory.cs" />
