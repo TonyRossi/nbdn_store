@@ -13,16 +13,19 @@ namespace nothinbutdotnetstore.infrastructure.containers.basic
 
         public Dependency an<Dependency>()
         {
+            return (Dependency) an(typeof (Dependency));
+        }
+
+        public object an(Type dependency_type)
+        {
             try
             {
-                return (Dependency)dependency_factories.get_factory_that_can_create(typeof(Dependency)).create();
+                return dependency_factories.get_factory_that_can_create(dependency_type).create();
             }
             catch (Exception ex)
             {
-                throw new DependencyCreationException(ex, typeof(Dependency));
+                throw new DependencyCreationException(ex, dependency_type);
             }
-
-            
         }
     }
 }
