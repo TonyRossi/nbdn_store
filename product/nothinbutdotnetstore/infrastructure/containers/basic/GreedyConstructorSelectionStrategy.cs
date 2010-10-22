@@ -8,8 +8,7 @@ namespace nothinbutdotnetstore.infrastructure.containers.basic
     {
         public ConstructorInfo get_applicable_constructor_on(Type type)
         {
-            ConstructorInfo[] constructors = type.GetConstructors();
-            return constructors.OrderByDescending(c => c.GetParameters().Count()).First();
+            return type.GetConstructors().OrderByDescending(c => c.GetParameters().Count()).First();
         }
     }
 }
