@@ -35,6 +35,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\thirdparty\log4net\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Machine.Specifications, Version=0.3.0.0, Culture=neutral, PublicKeyToken=5c474de7a495cff1, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\thirdparty\machine.specifications\Machine.Specifications.dll</HintPath>
@@ -63,7 +67,9 @@
   <ItemGroup>
     <Compile Include="infrastructure\ContainerSpecs.cs" />
     <Compile Include="infrastructure\ExpressionUtilitySpecs.cs" />
+    <Compile Include="infrastructure\Log4NetLogSpecs.cs" />
     <Compile Include="infrastructure\LogSpecs.cs" />
+    <Compile Include="infrastructure\TextWriterLoggerFactorySpecs.cs" />
     <Compile Include="infrastructure\TextWriterLoggerSpecs.cs" />
     <Compile Include="MessageGeneratorSpecs.cs" />
     <Compile Include="utility\CommonPipelineActions.cs" />

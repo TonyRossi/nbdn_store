@@ -1,11 +1,10 @@
-using System;
 using System.IO;
 
 namespace nothinbutdotnetstore.infrastructure.logging.basic
 {
     public class TextWriterLogger : Logger
     {
-        private TextWriter writer;
+        public TextWriter writer { get; private set; }
 
         public TextWriterLogger(TextWriter writer)
         {
