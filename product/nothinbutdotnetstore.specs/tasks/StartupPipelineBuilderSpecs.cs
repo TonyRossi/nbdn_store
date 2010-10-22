@@ -81,25 +81,26 @@ namespace nothinbutdotnetstore.specs.tasks
             static StartupCommand the_second_command;
         }
 
-//        [Subject(typeof(StartupPipelineBuilder))]
-//        public class when_finishing_with_a_command : concern_for_a_builder_with_one_command
-//        {
-//            Establish c = () =>
-//            {
-//                the_second_command = an<StartupCommand>();
-//                Enumerable.Range(1,100).each(x => all_commands.Add(an<StartupCommand>()));
-//            };
-//
-//            Because b = () =>
-//                     sut.finish_by<OurSecondCommand>();
-//
-//            It should_add_the_command_to_the_list_of_commands_to_run = () =>
-//                all_commands.ShouldContain(the_second_command);
-//  
-//
-//
-//            static StartupCommand the_second_command;
-//        }
+        [Subject(typeof(StartupPipelineBuilder))]
+        public class when_finishing_with_a_command : concern_for_a_builder_with_one_command
+        {
+            Establish c = () =>
+            {
+                the_second_command = an<StartupCommand>();
+                Enumerable.Range(1,100).each(x => all_commands.Add(an<StartupCommand>()));
+            };
+
+            Because b = () =>
+                     sut.finish_by<OurSecondCommand>();
+
+            It should_add_the_command_to_the_list_of_commands_to_run = () =>
+                all_commands.ShouldContain(the_second_command,the_first_command);
+
+            It should_run_all_of_the_commands = () =>
+                all_commands.each(x => x.received(y => y.run()));
+
+            static StartupCommand the_second_command;
+        }
 
         public class OurFirstCommand : StartupCommand
         {
