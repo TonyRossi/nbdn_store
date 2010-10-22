@@ -29,7 +29,12 @@ namespace nothinbutdotnetstore.tasks.startup
 
         public void finish_by<TheCommand>() where TheCommand :StartupCommand
         {
-            throw new NotImplementedException();
+            append_command(typeof(TheCommand));
+
+            foreach (StartupCommand command in all_commands)
+            {
+                command.run();
+            }
         }
     }
 }
