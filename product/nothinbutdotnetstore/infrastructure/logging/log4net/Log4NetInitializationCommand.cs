@@ -12,6 +12,10 @@ namespace nothinbutdotnetstore.infrastructure.logging.log4net
             this.configuration_element = configuration_element;
         }
 
+        public Log4NetInitializationCommand()
+        {
+        }
+
         public void run()
         {
             XmlConfigurator.Configure(configuration_element);

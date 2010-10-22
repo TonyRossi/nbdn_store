@@ -26,6 +26,7 @@ namespace nothinbutdotnetstore.specs.tasks
             {
                 Container.retrieve.an<FrontController>().ShouldBeAn<DefaultFrontController>();
                 Container.retrieve.an<LoggerFactory>().ShouldBeAn<Log4NetLoggerFactory>();
+
             };
                 
         }
