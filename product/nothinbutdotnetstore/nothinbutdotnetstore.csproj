@@ -56,9 +56,11 @@
     <Compile Include="domain\stubs\StubStoreDirectory.cs" />
     <Compile Include="infrastructure\Command.cs" />
     <Compile Include="infrastructure\containers\basic\BasicDependencyContainer.cs" />
+    <Compile Include="infrastructure\containers\basic\DefaultDependencyFactories.cs" />
     <Compile Include="infrastructure\containers\basic\DependencyCreationException.cs" />
     <Compile Include="infrastructure\containers\basic\DependencyFactories.cs" />
     <Compile Include="infrastructure\containers\basic\DependencyFactory.cs" />
+    <Compile Include="infrastructure\containers\basic\MissingDependencyFactory.cs" />
     <Compile Include="infrastructure\containers\DependencyContainer.cs" />
     <Compile Include="infrastructure\containers\Container.cs" />
     <Compile Include="infrastructure\containers\ContainerResolver.cs" />
