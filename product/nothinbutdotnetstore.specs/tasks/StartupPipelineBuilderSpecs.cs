@@ -23,6 +23,7 @@ namespace nothinbutdotnetstore.specs.tasks
                  the_first_command = an<StartupCommand>();
                  startup_command_factory = the_dependency<StartupCommandFactory>();
                  provide_a_basic_sut_constructor_argument(all_commands);
+                 provide_a_basic_sut_constructor_argument(typeof(OurFirstCommand));
 
 
                  startup_command_factory.Stub(x => x.create_from(typeof(OurFirstCommand)))
