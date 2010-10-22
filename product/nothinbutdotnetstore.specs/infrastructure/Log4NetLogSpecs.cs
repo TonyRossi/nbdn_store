@@ -1,8 +1,8 @@
  using log4net;
  using Machine.Specifications;
  using Machine.Specifications.DevelopWithPassion.Rhino;
+ using nothinbutdotnetstore.infrastructure.logging;
  using nothinbutdotnetstore.infrastructure.logging.log4net;
- using Logger = nothinbutdotnetstore.infrastructure.logging.Logger;
 
 namespace nothinbutdotnetstore.specs.infrastructure
  {   
