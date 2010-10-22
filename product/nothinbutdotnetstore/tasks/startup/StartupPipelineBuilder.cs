@@ -9,12 +9,16 @@ namespace nothinbutdotnetstore.tasks.startup
         IList<StartupCommand> all_commands;
         StartupCommand the_first_command;
 
-        public StartupPipelineBuilder(StartupCommandFactory factory, IList<StartupCommand> allCommands, Type firstCommandType)
+        public StartupPipelineBuilder(StartupCommandFactory factory, IList<StartupCommand> allCommands, Type first_command_type)
         {
             this.factory = factory;
             all_commands = allCommands;
-            var startupCommand = factory.create_from(firstCommandType);
-            all_commands.Add(startupCommand);
+            all_commands.Add(factory.create_from(first_command_type));
+        }
+
+        public StartupPipelineBuilder then_by<TheCommand>() where TheCommand : StartupCommand
+        {
+            throw new NotImplementedException();
         }
     }
 }
