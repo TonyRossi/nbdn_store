@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="infrastructure\BasicContainerSpecs.cs" />
     <Compile Include="infrastructure\ContainerSpecs.cs" />
     <Compile Include="infrastructure\ExpressionUtilitySpecs.cs" />
     <Compile Include="infrastructure\Log4NetInitializationCommandSpec.cs" />
