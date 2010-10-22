@@ -1,8 +1,5 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using nothinbutdotnetstore.web.application;
 
 namespace nothinbutdotnetstore.web.core.stubs
 {
@@ -15,11 +12,7 @@ namespace nothinbutdotnetstore.web.core.stubs
 
         public IEnumerator<WebCommand> GetEnumerator()
         {
-
-            yield return new DefaultWebCommand(x=> true,
-                                               new ViewMainDeparmentsInTheStore());
-
-        
+            yield break;
         }
     }
 }

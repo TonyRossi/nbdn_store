@@ -1,6 +1,4 @@
 using System.Web;
-using System.Web.Compilation;
-using nothinbutdotnetstore.web.core.stubs;
 
 namespace nothinbutdotnetstore.web.core
 {
@@ -8,10 +6,6 @@ namespace nothinbutdotnetstore.web.core
     {
         ViewRegistry view_registry;
         PageFactory page_factory;
-
-        public HttpHandlerViewFactory():this(new StubViewRegistry(),BuildManager.CreateInstanceFromVirtualPath)
-        {
-        }
 
         public HttpHandlerViewFactory(ViewRegistry view_registry, PageFactory page_factory)
         {

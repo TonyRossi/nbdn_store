@@ -19,8 +19,8 @@ namespace nothinbutdotnetstore.specs.web
             {
                 the_mapped_model = new InputModel();
                 payload = the_dependency<Payload>();
-                payload_mapper = the_dependency<PayloadMapper>();
-                payload_mapper.Stub(x => x.map_payload_to_input_model<InputModel>(payload)).Return(the_mapped_model);
+                input_model_mapper = the_dependency<InputModelMapper>();
+                input_model_mapper.Stub(x => x.map_from<InputModel>(payload)).Return(the_mapped_model);
             };
 
             Because b = () =>
@@ -33,7 +33,7 @@ namespace nothinbutdotnetstore.specs.web
             static InputModel result;
             static InputModel the_mapped_model;
             static Payload payload;
-            static PayloadMapper payload_mapper;
+            static InputModelMapper input_model_mapper;
         }
 
         public class InputModel

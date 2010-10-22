@@ -1,16 +1,9 @@
-using System.Web;
-
 namespace nothinbutdotnetstore.web.core
 {
     public class WebFormResponseEngine : ResponseEngine
     {
         ViewFactory view_factory;
         CurrentContextResolver context_resolver;
-
-        public WebFormResponseEngine():this(new HttpHandlerViewFactory(),
-            () => HttpContext.Current)
-        {
-        }
 
         public WebFormResponseEngine(ViewFactory view_factory, CurrentContextResolver context_resolver)
         {

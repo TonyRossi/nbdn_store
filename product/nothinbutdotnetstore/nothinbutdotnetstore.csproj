@@ -45,10 +45,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="domain\Department.cs" />
+    <Compile Include="domain\Details.cs" />
     <Compile Include="domain\StoreDirectory.cs" />
     <Compile Include="domain\Product.cs" />
     <Compile Include="domain\stubs\StubStoreDirectory.cs" />
+    <Compile Include="infrastructure\containers\DependencyContainer.cs" />
+    <Compile Include="infrastructure\containers\Container.cs" />
+    <Compile Include="infrastructure\containers\ContainerResolver.cs" />
+    <Compile Include="infrastructure\ExpressionUtility.cs" />
+    <Compile Include="infrastructure\logging\Log.cs" />
+    <Compile Include="infrastructure\logging\Logger.cs" />
+    <Compile Include="infrastructure\logging\LoggerFactory.cs" />
+    <Compile Include="infrastructure\Mapper.cs" />
+    <Compile Include="infrastructure\MapperRegistry.cs" />
     <Compile Include="MessageGenerator.cs" />
+    <Compile Include="web\application\mappers\DepartmentMapper.cs" />
+    <Compile Include="web\application\mappers\DetailsMapper.cs" />
+    <Compile Include="web\application\mappers\InputKey.cs" />
+    <Compile Include="web\application\mappers\InputKeys.cs" />
+    <Compile Include="web\application\mappers\PrimitiveMapper.cs" />
     <Compile Include="web\application\StoreDirectoryController.cs" />
     <Compile Include="web\application\ViewDepartmentsInDepartment.cs" />
     <Compile Include="web\application\ViewMainDeparmentsInTheStore.cs" />
@@ -59,13 +74,14 @@
     </Compile>
     <Compile Include="web\core\CurrentContextResolver.cs" />
     <Compile Include="web\core\DefaultFrontController.cs" />
+    <Compile Include="web\core\DefaultInputModelMapper.cs" />
     <Compile Include="web\core\DefaultWebCommand.cs" />
     <Compile Include="web\core\DefaultWebCommandRegistry.cs" />
     <Compile Include="web\core\FrontController.cs" />
     <Compile Include="web\core\HttpHandlerViewFactory.cs" />
     <Compile Include="web\core\MissingWebCommand.cs" />
     <Compile Include="web\core\Payload.cs" />
-    <Compile Include="web\core\PayloadMapper.cs" />
+    <Compile Include="web\core\InputModelMapper.cs" />
     <Compile Include="web\core\Request.cs" />
     <Compile Include="web\core\RequestCriteria.cs" />
     <Compile Include="web\core\RequestFactory.cs" />
@@ -74,6 +90,7 @@
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
     <Compile Include="web\core\stubs\StubViewRegistry.cs" />
+    <Compile Include="web\core\Url.cs" />
     <Compile Include="web\core\ViewFactory.cs" />
     <Compile Include="web\core\ViewForA.cs" />
     <Compile Include="web\core\ViewRegistry.cs" />

@@ -61,9 +61,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="infrastructure\ContainerSpecs.cs" />
+    <Compile Include="infrastructure\ExpressionUtilitySpecs.cs" />
+    <Compile Include="infrastructure\LogSpecs.cs" />
     <Compile Include="MessageGeneratorSpecs.cs" />
+    <Compile Include="utility\CommonPipelineActions.cs" />
     <Compile Include="utility\ObjectMother.cs" />
+    <Compile Include="web\DepartmentMapperSpecs.cs" />
     <Compile Include="web\FrontControllerSpecs.cs" />
+    <Compile Include="web\InputKeySpecs.cs" />
+    <Compile Include="web\InputModelMapperSpecs.cs" />
     <Compile Include="web\RequestHandlerSpecs.cs" />
     <Compile Include="web\DefaultRequest.cs" />
     <Compile Include="web\RequestSpecs.cs" />

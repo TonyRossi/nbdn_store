@@ -1,5 +1,4 @@
 ﻿using nothinbutdotnetstore.domain;
-using nothinbutdotnetstore.domain.stubs;
 using nothinbutdotnetstore.web.core;
 
 namespace nothinbutdotnetstore.web.application
@@ -8,12 +7,6 @@ namespace nothinbutdotnetstore.web.application
     {
         StoreDirectory store_directory;
         ResponseEngine response_engine;
-
-        public ViewDepartmentsInDepartment()
-            : this(new StubStoreDirectory(),
-                   new WebFormResponseEngine())
-        {
-        }
 
         public ViewDepartmentsInDepartment(StoreDirectory store_directory, ResponseEngine response_engine)
         {
