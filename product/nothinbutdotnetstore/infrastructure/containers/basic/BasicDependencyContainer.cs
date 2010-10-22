@@ -19,7 +19,7 @@ namespace nothinbutdotnetstore.infrastructure.containers.basic
             }
             catch (Exception ex)
             {
-                throw new DependencyCreationException(ex.Message, ex, typeof(Dependency));
+                throw new DependencyCreationException(ex, typeof(Dependency));
             }
 
             

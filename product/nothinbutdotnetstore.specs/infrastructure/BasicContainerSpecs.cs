@@ -70,6 +70,32 @@ namespace nothinbutdotnetstore.specs.infrastructure
             static Exception inner_exception;
         }
 
+        [Subject(typeof(BasicDependencyContainer))]
+        public class when_retrieving_an_implementation_of_a_dependency_non_generically: concern
+        {
+            Establish c = () =>
+            {
+                dependency_factories = the_dependency<DependencyFactories>();
+                dependency_factory = an<DependencyFactory>();
+                dependency_created_by_factory = new MyDependency();
+
+                dependency_factory.Stub(x => x.create()).Return(dependency_created_by_factory);
+                dependency_factories.Stub(x => x.get_factory_that_can_create(typeof(MyDependency))).Return(
+                    dependency_factory);
+            };
+
+            Because b = () =>
+                result = sut.an(typeof(MyDependency));
+
+            It should_return_the_dependency_created_by_the_factory = () =>
+                result.ShouldEqual(dependency_created_by_factory);
+
+            static object result;
+            static MyDependency dependency_created_by_factory;
+            static DependencyFactory dependency_factory;
+            static DependencyFactories dependency_factories;
+        }
+
         public class MyDependency
         {
         }
