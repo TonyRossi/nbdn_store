@@ -18,7 +18,8 @@ namespace nothinbutdotnetstore.tasks.startup
 
         public StartupPipelineBuilder then_by<TheCommand>() where TheCommand : StartupCommand
         {
-            throw new NotImplementedException();
+            all_commands.Add(factory.create_from(typeof (TheCommand)));
+            return this;
         }
     }
 }
