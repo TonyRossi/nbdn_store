@@ -1,5 +1,8 @@
+using nothinbutdotnetstore.infrastructure;
+
 namespace nothinbutdotnetstore.web.core
 {
+    [Register]
     public class DefaultFrontController : FrontController
     {
         WebCommandRegistry web_command_registry;

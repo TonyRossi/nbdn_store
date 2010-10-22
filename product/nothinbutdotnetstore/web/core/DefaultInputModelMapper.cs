@@ -3,6 +3,7 @@ using nothinbutdotnetstore.infrastructure;
 
 namespace nothinbutdotnetstore.web.core
 {
+    [Register]
     public class DefaultInputModelMapper : InputModelMapper
     {
         MapperRegistry mapper_registry;

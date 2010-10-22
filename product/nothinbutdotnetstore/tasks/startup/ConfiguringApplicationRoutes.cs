@@ -3,11 +3,11 @@ using nothinbutdotnetstore.web.core;
 
 namespace nothinbutdotnetstore.tasks.startup
 {
-    public class ConfigureApplicationRoutes : StartupCommand
+    public class ConfiguringApplicationRoutes : StartupCommand
     {
         StartupFacilities startup_facilities;
 
-        public ConfigureApplicationRoutes(StartupFacilities startup_facilities)
+        public ConfiguringApplicationRoutes(StartupFacilities startup_facilities)
         {
             this.startup_facilities = startup_facilities;
         }
