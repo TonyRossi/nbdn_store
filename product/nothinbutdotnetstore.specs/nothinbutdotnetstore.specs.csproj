@@ -67,6 +67,8 @@
   <ItemGroup>
     <Compile Include="infrastructure\ContainerSpecs.cs" />
     <Compile Include="infrastructure\ExpressionUtilitySpecs.cs" />
+    <Compile Include="infrastructure\Log4NetInitializationCommandSpec.cs" />
+    <Compile Include="infrastructure\Log4NetLoggerFactorySpecs.cs" />
     <Compile Include="infrastructure\Log4NetLogSpecs.cs" />
     <Compile Include="infrastructure\LogSpecs.cs" />
     <Compile Include="infrastructure\TextWriterLoggerFactorySpecs.cs" />

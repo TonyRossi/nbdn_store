@@ -1,3 +1,5 @@
+using nothinbutdotnetstore.infrastructure.logging;
+
 namespace nothinbutdotnetstore.web.core
 {
     public class DefaultFrontController : FrontController
@@ -7,6 +9,8 @@ namespace nothinbutdotnetstore.web.core
         public DefaultFrontController(WebCommandRegistry web_command_registry)
         {
             this.web_command_registry = web_command_registry;
+
+            Log.an.informational("this is the information");
         }
 
         public void process(Request request)

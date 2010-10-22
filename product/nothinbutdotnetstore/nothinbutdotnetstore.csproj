@@ -46,6 +46,7 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Web" />
+    <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="domain\Department.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="domain\StoreDirectory.cs" />
     <Compile Include="domain\Product.cs" />
     <Compile Include="domain\stubs\StubStoreDirectory.cs" />
+    <Compile Include="infrastructure\Command.cs" />
     <Compile Include="infrastructure\containers\DependencyContainer.cs" />
     <Compile Include="infrastructure\containers\Container.cs" />
     <Compile Include="infrastructure\containers\ContainerResolver.cs" />
@@ -60,7 +62,9 @@
     <Compile Include="infrastructure\logging\basic\TextWriterLogger.cs" />
     <Compile Include="infrastructure\logging\basic\TextWriterLoggerFactory.cs" />
     <Compile Include="infrastructure\logging\Log.cs" />
+    <Compile Include="infrastructure\logging\log4net\Log4NetInitializationCommand.cs" />
     <Compile Include="infrastructure\logging\log4net\Log4NetLog.cs" />
+    <Compile Include="infrastructure\logging\log4net\Log4NetLoggerFactory.cs" />
     <Compile Include="infrastructure\logging\Logger.cs" />
     <Compile Include="infrastructure\logging\LoggerFactory.cs" />
     <Compile Include="infrastructure\Mapper.cs" />
