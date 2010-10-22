@@ -16,7 +16,11 @@ namespace nothinbutdotnetstore.web.core.stubs
 
         public IEnumerator<WebCommand> GetEnumerator()
         {
-            yield return new DefaultWebCommand(x => true, new ViewMainDeparmentsInTheStore(new StubStoreDirectory(), new WebFormResponseEngine(new HttpHandlerViewFactory(new StubViewRegistry(), (x, y) => BuildManager.CreateInstanceFromVirtualPath(x,y)),()=>HttpContext.Current)));
+            yield return new DefaultWebCommand(x => true, 
+                new ViewMainDeparmentsInTheStore(new StubStoreDirectory(), 
+                    new WebFormResponseEngine(
+                        new HttpHandlerViewFactory(new StubViewRegistry(), 
+                            (x, y) => BuildManager.CreateInstanceFromVirtualPath(x,y)),()=>HttpContext.Current)));
         }
     }
 }

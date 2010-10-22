@@ -55,8 +55,10 @@
     <Compile Include="domain\Product.cs" />
     <Compile Include="domain\stubs\StubStoreDirectory.cs" />
     <Compile Include="infrastructure\Command.cs" />
+    <Compile Include="infrastructure\containers\basic\AutomaticDependencyFactory.cs" />
     <Compile Include="infrastructure\containers\basic\BasicDependencyFactory.cs" />
     <Compile Include="infrastructure\containers\basic\BasicDependencyContainer.cs" />
+    <Compile Include="infrastructure\containers\basic\ConstructorSelectionStrategy.cs" />
     <Compile Include="infrastructure\containers\basic\DefaultDependencyFactories.cs" />
     <Compile Include="infrastructure\containers\basic\DependencyCreationException.cs" />
     <Compile Include="infrastructure\containers\basic\DependencyFactories.cs" />
@@ -77,7 +79,10 @@
     <Compile Include="infrastructure\Mapper.cs" />
     <Compile Include="infrastructure\MapperRegistry.cs" />
     <Compile Include="MessageGenerator.cs" />
+    <Compile Include="tasks\startup\ConfigureFrontController.cs" />
+    <Compile Include="tasks\startup\ConfigureInfrastructure.cs" />
     <Compile Include="tasks\startup\Startup.cs" />
+    <Compile Include="tasks\startup\StartupCommand.cs" />
     <Compile Include="web\application\mappers\DepartmentMapper.cs" />
     <Compile Include="web\application\mappers\DetailsMapper.cs" />
     <Compile Include="web\application\mappers\InputKey.cs" />

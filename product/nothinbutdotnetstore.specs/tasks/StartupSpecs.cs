@@ -20,7 +20,7 @@ namespace nothinbutdotnetstore.specs.tasks
         public class when_it_has_finished_running : concern
         {
             Because b = () =>
-                Startup.run();
+                Startup.start_the_application();
 
             It should_be_able_to_run_the_application_correctly = () =>
             {

@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="infrastructure\AutomaticDependencyFactorySpecs.cs" />
     <Compile Include="infrastructure\BasicContainerSpecs.cs" />
     <Compile Include="infrastructure\BasicDependencyFactorySpecs.cs" />
     <Compile Include="infrastructure\ContainerSpecs.cs" />
