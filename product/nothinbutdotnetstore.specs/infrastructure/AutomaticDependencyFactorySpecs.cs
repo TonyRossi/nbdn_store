@@ -6,6 +6,7 @@
  using Machine.Specifications.DevelopWithPassion.Rhino;
  using nothinbutdotnetstore.infrastructure.containers;
  using nothinbutdotnetstore.infrastructure.containers.basic;
+ using nothinbutdotnetstore.specs.utility;
  using Rhino.Mocks;
  using Machine.Specifications.DevelopWithPassion.Extensions;
 
@@ -32,8 +33,9 @@ namespace nothinbutdotnetstore.specs.infrastructure
                  the_command = new SqlCommand();
                  the_reader = an<IDataReader>();
 
-                 Expression<Func<OurTypeWithLotsOfDependencies>> new_expression = () => new OurTypeWithLotsOfDependencies(null,null,null);
-                 var constructor = new_expression.Body.downcast_to<NewExpression>().Constructor;
+                 var constructor = ExpressionUtility.get_constructor_pointed_at_by(() => new
+                                                                                       OurTypeWithLotsOfDependencies(
+                                                                                       null, null, null));
 
 
                  constructor_selection_strategy.Stub(

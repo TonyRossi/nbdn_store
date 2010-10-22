@@ -81,6 +81,7 @@
     <Compile Include="MessageGeneratorSpecs.cs" />
     <Compile Include="tasks\StartupSpecs.cs" />
     <Compile Include="utility\CommonPipelineActions.cs" />
+    <Compile Include="utility\ExpressionUtility.cs" />
     <Compile Include="utility\ObjectMother.cs" />
     <Compile Include="web\DepartmentMapperSpecs.cs" />
     <Compile Include="web\FrontControllerSpecs.cs" />
