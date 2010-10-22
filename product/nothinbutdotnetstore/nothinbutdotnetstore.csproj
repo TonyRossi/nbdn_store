@@ -55,6 +55,7 @@
     <Compile Include="domain\Product.cs" />
     <Compile Include="domain\stubs\StubStoreDirectory.cs" />
     <Compile Include="infrastructure\Command.cs" />
+    <Compile Include="infrastructure\containers\basic\BasicDependencyFactory.cs" />
     <Compile Include="infrastructure\containers\basic\BasicDependencyContainer.cs" />
     <Compile Include="infrastructure\containers\basic\DefaultDependencyFactories.cs" />
     <Compile Include="infrastructure\containers\basic\DependencyCreationException.cs" />

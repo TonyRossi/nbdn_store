@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="infrastructure\BasicContainerSpecs.cs" />
+    <Compile Include="infrastructure\BasicDependencyFactorySpecs.cs" />
     <Compile Include="infrastructure\ContainerSpecs.cs" />
     <Compile Include="infrastructure\DependencyFactoriesSpecs.cs" />
     <Compile Include="infrastructure\ExpressionUtilitySpecs.cs" />
