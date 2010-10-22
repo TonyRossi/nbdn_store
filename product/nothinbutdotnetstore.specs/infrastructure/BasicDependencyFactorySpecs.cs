@@ -22,6 +22,7 @@ namespace nothinbutdotnetstore.specs.infrastructure
              {
                  the_connection = new SqlConnection();
                  provide_a_basic_sut_constructor_argument<Func<object>>(() => the_connection);
+
              };
 
              Because b = () =>

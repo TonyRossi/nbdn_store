@@ -77,6 +77,7 @@
     <Compile Include="infrastructure\Mapper.cs" />
     <Compile Include="infrastructure\MapperRegistry.cs" />
     <Compile Include="MessageGenerator.cs" />
+    <Compile Include="tasks\startup\Startup.cs" />
     <Compile Include="web\application\mappers\DepartmentMapper.cs" />
     <Compile Include="web\application\mappers\DetailsMapper.cs" />
     <Compile Include="web\application\mappers\InputKey.cs" />

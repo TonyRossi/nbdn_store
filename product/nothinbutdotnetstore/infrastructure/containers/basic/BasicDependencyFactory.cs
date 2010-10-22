@@ -4,16 +4,16 @@ namespace nothinbutdotnetstore.infrastructure.containers.basic
 {
     public class BasicDependencyFactory : DependencyFactory
     {
-    	private readonly Func<object> _dependency;
+    	private readonly Func<object> factory;
 
-    	public BasicDependencyFactory(Func<object> dependency)
+    	public BasicDependencyFactory(Func<object> factory)
 		{
-			_dependency = dependency;
+			this.factory = factory;
 		}
 
     	public object create()
     	{
-    		return _dependency();
+    		return factory();
     	}
     }
 }
