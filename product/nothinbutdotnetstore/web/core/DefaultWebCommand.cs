@@ -1,6 +1,6 @@
 namespace nothinbutdotnetstore.web.core
 {
-    public class DefaultWebCommand : WebCommand
+    public class    DefaultWebCommand : WebCommand
     {
         RequestCriteria criteria;
         ApplicationCommand command;

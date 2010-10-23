@@ -9,6 +9,11 @@ namespace nothinbutdotnetstore.tasks.startup
         StartupCommandFactory factory;
         IList<StartupCommand> all_commands;
 
+        public StartupPipelineBuilder(Type initial_command_type):this(new DefaultStartupCommandFactory(),
+            new List<StartupCommand>(),initial_command_type)
+        {
+        }
+
         public StartupPipelineBuilder(StartupCommandFactory factory, IList<StartupCommand> allCommands, Type first_command_type)
         {
             this.factory = factory;

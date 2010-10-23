@@ -3,7 +3,8 @@ using System.Linq;
 
 namespace nothinbutdotnetstore.web.core
 {
-    public class DefaultWebCommandRegistry : WebCommandRegistry
+    public class DefaultWebCommandRegistry :
+        WebCommandRegistry
     {
         IEnumerable<WebCommand> known_commands;
 
