@@ -5,9 +5,9 @@ namespace nothinbutdotnetstore.infrastructure.containers.basic
 {
     public class AutomaticDependencyFactory : DependencyFactory
     {
-        DependencyContainer dependency_container;
-        ConstructorSelectionStrategy constructor_selection_strategy;
-        Type type;
+        public DependencyContainer dependency_container;
+        public ConstructorSelectionStrategy constructor_selection_strategy;
+        public Type type;
 
         public AutomaticDependencyFactory(DependencyContainer dependency_container,
                                           ConstructorSelectionStrategy constructor_selection_strategy, Type type)

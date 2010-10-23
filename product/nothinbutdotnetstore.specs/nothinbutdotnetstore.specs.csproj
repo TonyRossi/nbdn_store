@@ -82,6 +82,7 @@
     <Compile Include="infrastructure\TextWriterLoggerSpecs.cs" />
     <Compile Include="MessageGeneratorSpecs.cs" />
     <Compile Include="tasks\StartupCommandFactorySpecs.cs" />
+    <Compile Include="tasks\StartupFacilitiesSpecs.cs" />
     <Compile Include="tasks\StartupPipelineBuilderSpecs.cs" />
     <Compile Include="tasks\StartupSpecs.cs" />
     <Compile Include="utility\CommonPipelineActions.cs" />

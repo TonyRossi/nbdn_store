@@ -88,6 +88,7 @@
     <Compile Include="tasks\startup\commands\ConfiguringApplicationRoutes.cs" />
     <Compile Include="tasks\startup\commands\A_ConfiguringInfrastructure.cs" />
     <Compile Include="tasks\startup\DefaultStartupCommandFactory.cs" />
+    <Compile Include="tasks\startup\DefaultStartupFacilities.cs" />
     <Compile Include="tasks\startup\Start.cs" />
     <Compile Include="tasks\startup\Startup.cs" />
     <Compile Include="tasks\startup\StartupCommand.cs" />
