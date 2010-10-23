@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 
 namespace nothinbutdotnetstore.tasks.startup
 {
@@ -14,14 +13,21 @@ namespace nothinbutdotnetstore.tasks.startup
 
         public static void by_running_the_pipeline_defined_in(string pipeline_file_location)
         {
-            var lines = File.ReadAllLines(pipeline_file_location);
-            foreach (var line in lines)
+            new StartupPipelineBuilder(typeof(NulloStartupCommand)).run_all_commands_in(
+                File.ReadAllLines(pipeline_file_location).Select<string,Type>(new StringToTypeMapper().map_from));
+        }
+
+        public class NulloStartupCommand : StartupCommand
+        {
+            StartupFacilities startup_facilities;
+
+            public NulloStartupCommand(StartupFacilities startup_facilities)
             {
-                string line1 = line;
-                var matching_type = AppDomain.CurrentDomain.GetAssemblies().SelectMany(a => a.GetTypes()).First(t => t.Name.Contains(line1)); 
-                var instance = (StartupCommand) Activator.CreateInstance(matching_type);
-                
-                instance.run();
+                this.startup_facilities = startup_facilities;
+            }
+
+            public void run()
+            {
             }
         }
     }

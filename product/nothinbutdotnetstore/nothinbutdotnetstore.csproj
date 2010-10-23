@@ -95,6 +95,7 @@
     <Compile Include="tasks\startup\StartupCommandFactory.cs" />
     <Compile Include="tasks\startup\StartupFacilities.cs" />
     <Compile Include="tasks\startup\StartupPipelineBuilder.cs" />
+    <Compile Include="tasks\startup\StringToTypeMapper.cs" />
     <Compile Include="web\application\mappers\DepartmentMapper.cs" />
     <Compile Include="web\application\mappers\DetailsMapper.cs" />
     <Compile Include="web\application\mappers\InputKey.cs" />

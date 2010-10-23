@@ -36,7 +36,18 @@ namespace nothinbutdotnetstore.tasks.startup
         public void finish_by<TheCommand>() where TheCommand :StartupCommand
         {
             append_command(typeof(TheCommand));
+            run_all_commands();
+        }
+
+        void run_all_commands()
+        {
             all_commands.each(x => x.run());
+        }
+
+        public void run_all_commands_in(IEnumerable<Type> all_command_types)
+        {
+            all_command_types.each(append_command);            
+            run_all_commands();
         }
     }
 }

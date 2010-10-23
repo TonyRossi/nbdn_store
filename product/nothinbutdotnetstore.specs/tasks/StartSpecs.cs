@@ -1,15 +1,9 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
 using Machine.Specifications;
 using Machine.Specifications.DevelopWithPassion;
 using Machine.Specifications.DevelopWithPassion.Rhino;
-using nothinbutdotnetstore.infrastructure.containers;
-using nothinbutdotnetstore.infrastructure.logging;
-using nothinbutdotnetstore.infrastructure.logging.log4net;
-using nothinbutdotnetstore.specs.utility;
 using nothinbutdotnetstore.tasks.startup;
-using nothinbutdotnetstore.web.core;
 
 namespace nothinbutdotnetstore.specs.tasks
 {
@@ -17,31 +11,29 @@ namespace nothinbutdotnetstore.specs.tasks
     {
         public abstract class concern : Observes<Start>
         {
-
         }
 
-        [Subject(typeof (StartUp))]
+        [Subject(typeof(StartUp))]
         public class when_it_has_finished_running : concern
         {
-            Establish e = ()=>
-                        {
-                            file_location = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "test_start_file.txt");
-                            file_contents = @"A_StartupCommand
+            Establish e = () =>
+            {
+                file_location = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "test_start_file.txt");
+                file_contents = @"A_StartupCommand
 B_StartupCommand";
-                            add_pipeline_behaviour(
-                                new PipelineBehaviour(() => File.WriteAllText(file_location, file_contents),
-                                                      () => File.Delete(file_location))); 
-                        };
-
-            Because b = () => {
-                                 Start.by_running_the_pipeline_defined_in(file_location);
+                add_pipeline_behaviour(
+                    new PipelineBehaviour(() => File.WriteAllText(file_location, file_contents),
+                                          () => File.Delete(file_location)));
             };
 
+            Because b = () => 
+                Start.by_running_the_pipeline_defined_in(file_location);
+
             It should_be_able_to_run_the_application_correctly = () =>
-                                                                     {
-                                                                         A_StartupCommand.ran.ShouldBeTrue();
-                                                                         B_StartupCommand.ran.ShouldBeTrue();
-                                                                     };
+            {
+                A_StartupCommand.ran.ShouldBeTrue();
+                B_StartupCommand.ran.ShouldBeTrue();
+            };
 
             static string file_location;
             static string file_contents;
@@ -50,6 +42,7 @@ B_StartupCommand";
         public class A_StartupCommand : StartupCommand
         {
             public static bool ran { get; private set; }
+
             public void run()
             {
                 ran = true;
@@ -60,6 +53,7 @@ B_StartupCommand";
         public class B_StartupCommand : StartupCommand
         {
             public static bool ran { get; private set; }
+
             public void run()
             {
                 ran = true;
