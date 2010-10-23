@@ -1,7 +1,7 @@
 using nothinbutdotnetstore.web.application;
 using nothinbutdotnetstore.web.core;
 
-namespace nothinbutdotnetstore.tasks.startup
+namespace nothinbutdotnetstore.tasks.startup.commands
 {
     public class ConfiguringApplicationRoutes : StartupCommand
     {

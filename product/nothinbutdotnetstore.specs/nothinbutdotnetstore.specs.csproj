@@ -81,6 +81,7 @@
     <Compile Include="infrastructure\TextWriterLoggerFactorySpecs.cs" />
     <Compile Include="infrastructure\TextWriterLoggerSpecs.cs" />
     <Compile Include="MessageGeneratorSpecs.cs" />
+    <Compile Include="tasks\StartupCommandFactorySpecs.cs" />
     <Compile Include="tasks\StartupPipelineBuilderSpecs.cs" />
     <Compile Include="tasks\StartupSpecs.cs" />
     <Compile Include="utility\CommonPipelineActions.cs" />
@@ -90,15 +91,19 @@
     <Compile Include="web\FrontControllerSpecs.cs" />
     <Compile Include="web\InputKeySpecs.cs" />
     <Compile Include="web\InputModelMapperSpecs.cs" />
+    <Compile Include="web\MapperRegistrySpecs.cs" />
     <Compile Include="web\RequestHandlerSpecs.cs" />
     <Compile Include="web\DefaultRequest.cs" />
     <Compile Include="web\RequestSpecs.cs" />
     <Compile Include="web\ResponseEngineSpecs.cs" />
     <Compile Include="web\RouteSpecs.cs" />
+    <Compile Include="web\RouteTableSpecs.cs" />
     <Compile Include="web\ViewDepartmentsInDepartmentsSpecs.cs" />
     <Compile Include="web\ViewFactorySpecs.cs" />
     <Compile Include="web\ViewMainDeparmentsInTheStoreSpecs.cs" />
     <Compile Include="web\ViewProductsInADepartmentSpecs.cs" />
+    <Compile Include="web\WebCommandFactorySpecs.cs" />
+    <Compile Include="web\ViewRegistrySpecs.cs" />
     <Compile Include="web\WebCommandRegistrySpecs.cs" />
     <Compile Include="web\WebCommandSpecs.cs" />
   </ItemGroup>

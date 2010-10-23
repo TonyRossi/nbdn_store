@@ -3,13 +3,13 @@ using nothinbutdotnetstore.infrastructure.containers.basic;
 using nothinbutdotnetstore.infrastructure.logging;
 using nothinbutdotnetstore.infrastructure.logging.log4net;
 
-namespace nothinbutdotnetstore.tasks.startup
+namespace nothinbutdotnetstore.tasks.startup.commands
 {
-    public class ConfiguringInfrastructure : StartupCommand
+    public class A_ConfiguringInfrastructure : StartupCommand
     {
         StartupFacilities startup_facilities;
 
-        public ConfiguringInfrastructure(StartupFacilities startup_facilities)
+        public A_ConfiguringInfrastructure(StartupFacilities startup_facilities)
         {
             this.startup_facilities = startup_facilities;
         }

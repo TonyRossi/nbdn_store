@@ -3,6 +3,7 @@ using System.Reflection;
 using Machine.Specifications;
 using Machine.Specifications.DevelopWithPassion.Rhino;
 using nothinbutdotnetstore.infrastructure.containers.basic;
+using nothinbutdotnetstore.specs.utility;
 
 namespace nothinbutdotnetstore.specs.infrastructure
 {
@@ -18,7 +19,7 @@ namespace nothinbutdotnetstore.specs.infrastructure
             Establish c = () =>
             {
                 dependency_type = typeof(MyType);
-                expected_constructor = typeof(MyType).GetConstructor(new[] { typeof(int) });
+                expected_constructor = ExpressionUtility.get_constructor_pointed_at_by(() => new MyType(0));
             };
 
             Because b = () =>
@@ -45,7 +46,7 @@ namespace nothinbutdotnetstore.specs.infrastructure
             Establish c = () =>
             {
                 dependency_type = typeof(MyType);
-                expected_constructor = typeof(MyType).GetConstructor(new Type[0]);
+                expected_constructor = ExpressionUtility.get_constructor_pointed_at_by(() => new MyType());
             };
 
             Because b = () =>
@@ -70,7 +71,7 @@ namespace nothinbutdotnetstore.specs.infrastructure
             Establish c = () =>
             {
                 dependency_type = typeof(MyType);
-                expected_constructor = typeof(MyType).GetConstructor(new Type[]{typeof(object), typeof(object)});
+                expected_constructor = ExpressionUtility.get_constructor_pointed_at_by(() => new MyType(null, null));
             };
 
             Because b = () =>

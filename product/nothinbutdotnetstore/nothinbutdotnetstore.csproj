@@ -69,6 +69,7 @@
     <Compile Include="infrastructure\containers\DependencyContainer.cs" />
     <Compile Include="infrastructure\containers\Container.cs" />
     <Compile Include="infrastructure\containers\ContainerResolver.cs" />
+    <Compile Include="infrastructure\DefaultMapperRegistry.cs" />
     <Compile Include="infrastructure\EnumerableExtensions.cs" />
     <Compile Include="infrastructure\ExpressionUtility.cs" />
     <Compile Include="infrastructure\logging\basic\TextWriterLogger.cs" />
@@ -83,9 +84,11 @@
     <Compile Include="infrastructure\MapperRegistry.cs" />
     <Compile Include="infrastructure\Register.cs" />
     <Compile Include="MessageGenerator.cs" />
-    <Compile Include="tasks\startup\AutoWiringDependencies.cs" />
-    <Compile Include="tasks\startup\ConfiguringApplicationRoutes.cs" />
-    <Compile Include="tasks\startup\ConfiguringInfrastructure.cs" />
+    <Compile Include="tasks\startup\commands\B_AutoWiringDependencies.cs" />
+    <Compile Include="tasks\startup\commands\ConfiguringApplicationRoutes.cs" />
+    <Compile Include="tasks\startup\commands\A_ConfiguringInfrastructure.cs" />
+    <Compile Include="tasks\startup\DefaultStartupCommandFactory.cs" />
+    <Compile Include="tasks\startup\Start.cs" />
     <Compile Include="tasks\startup\Startup.cs" />
     <Compile Include="tasks\startup\StartupCommand.cs" />
     <Compile Include="tasks\startup\StartupCommandFactory.cs" />
@@ -107,7 +110,9 @@
     <Compile Include="web\core\CurrentContextResolver.cs" />
     <Compile Include="web\core\DefaultFrontController.cs" />
     <Compile Include="web\core\DefaultInputModelMapper.cs" />
+    <Compile Include="web\core\DefaultRouteTable.cs" />
     <Compile Include="web\core\DefaultWebCommand.cs" />
+    <Compile Include="web\core\DefaultWebCommandFactory.cs" />
     <Compile Include="web\core\DefaultWebCommandRegistry.cs" />
     <Compile Include="web\core\FrontController.cs" />
     <Compile Include="web\core\HttpHandlerViewFactory.cs" />
@@ -126,6 +131,8 @@
     <Compile Include="web\core\ViewFactory.cs" />
     <Compile Include="web\core\ViewForA.cs" />
     <Compile Include="web\core\ViewRegistry.cs" />
+    <Compile Include="web\core\WebCommandFactory.cs" />
+    <Compile Include="web\core\DefaultViewRegistry.cs" />
     <Compile Include="web\core\WebCommand.cs" />
     <Compile Include="web\core\WebCommandRegistry.cs" />
     <Compile Include="web\core\WebFormResponseEngine.cs" />
