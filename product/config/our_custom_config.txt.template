@@ -1,5 +1,0 @@
-This is our custom config:
-
-The log level is : @log_level@
-The connection string : @config_connectionstring@
-The custom: @our_custom_element@
