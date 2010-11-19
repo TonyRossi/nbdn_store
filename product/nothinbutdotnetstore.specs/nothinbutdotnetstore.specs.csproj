@@ -65,49 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="infrastructure\AutomaticDependencyFactorySpecs.cs" />
-    <Compile Include="infrastructure\BasicContainerSpecs.cs" />
-    <Compile Include="infrastructure\BasicDependencyFactorySpecs.cs" />
-    <Compile Include="infrastructure\ContainerSpecs.cs" />
-    <Compile Include="infrastructure\DependencyFactoriesSpecs.cs" />
-    <Compile Include="infrastructure\EnumerableExtensionsSpecs.cs" />
-    <Compile Include="infrastructure\ExpressionUtilitySpecs.cs" />
-    <Compile Include="infrastructure\GreedyConstructorSelectionStrategySpecs.cs" />
-    <Compile Include="infrastructure\Log4NetInitializationCommandSpec.cs" />
-    <Compile Include="infrastructure\Log4NetLoggerFactorySpecs.cs" />
-    <Compile Include="infrastructure\Log4NetLogSpecs.cs" />
-    <Compile Include="infrastructure\LogSpecs.cs" />
-    <Compile Include="infrastructure\MissingDependencyFactorySpecs.cs" />
-    <Compile Include="infrastructure\TextWriterLoggerFactorySpecs.cs" />
-    <Compile Include="infrastructure\TextWriterLoggerSpecs.cs" />
     <Compile Include="MessageGeneratorSpecs.cs" />
-    <Compile Include="tasks\StartSpecs.cs" />
-    <Compile Include="tasks\StartupCommandFactorySpecs.cs" />
-    <Compile Include="tasks\StartupFacilitiesSpecs.cs" />
-    <Compile Include="tasks\StartupPipelineBuilderSpecs.cs" />
-    <Compile Include="tasks\StartupSpecs.cs" />
-    <Compile Include="utility\CommonPipelineActions.cs" />
-    <Compile Include="utility\ExpressionUtility.cs" />
-    <Compile Include="utility\ObjectMother.cs" />
-    <Compile Include="web\DepartmentMapperSpecs.cs" />
-    <Compile Include="web\FrontControllerSpecs.cs" />
-    <Compile Include="web\InputKeySpecs.cs" />
-    <Compile Include="web\InputModelMapperSpecs.cs" />
-    <Compile Include="web\MapperRegistrySpecs.cs" />
-    <Compile Include="web\RequestHandlerSpecs.cs" />
-    <Compile Include="web\DefaultRequest.cs" />
-    <Compile Include="web\RequestSpecs.cs" />
-    <Compile Include="web\ResponseEngineSpecs.cs" />
-    <Compile Include="web\RouteSpecs.cs" />
-    <Compile Include="web\RouteTableSpecs.cs" />
-    <Compile Include="web\ViewDepartmentsInDepartmentsSpecs.cs" />
-    <Compile Include="web\ViewFactorySpecs.cs" />
-    <Compile Include="web\ViewMainDeparmentsInTheStoreSpecs.cs" />
-    <Compile Include="web\ViewProductsInADepartmentSpecs.cs" />
-    <Compile Include="web\WebCommandFactorySpecs.cs" />
-    <Compile Include="web\ViewRegistrySpecs.cs" />
-    <Compile Include="web\WebCommandRegistrySpecs.cs" />
-    <Compile Include="web\WebCommandSpecs.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\nothinbutdotnetstore\nothinbutdotnetstore.csproj">
